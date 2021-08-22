@@ -11,6 +11,8 @@ def read_csv(csv_file):
 
 """Calculate distance between 2 cities"""
 def calculate_distance(set1, set2):
+    #if you can't install geopy , you can use this formula
+    # return 6371.01 * acos(sin(set1[0])*sin(set2[0]) + cos(set1[0])*cos(set2[0])*cos(set1[1] - set2[1]))
     return round(great_circle(set1, set2).km,3)
 
 """Build the distance matrix"""
